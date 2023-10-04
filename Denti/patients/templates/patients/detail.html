@@ -1,0 +1,7 @@
+{% csrf_token %}
+<fieldset>
+    <legend><h1>{{patient.first_name}} {{patient.last_name}}</h1></legend>
+    {% if error_message %}<p><strong>{{ error_message}}</strong></p>{% endif %}
+    <h2>{{ patient.birthday }}</h2>
+    <h2>{{ patient.next_treatment }}</h2>
+</fieldset>

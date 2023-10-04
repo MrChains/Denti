@@ -1,0 +1,9 @@
+{% if next_patients_list %}
+    <ul>
+    {% for patient in next_patients_list %}
+         <li><a href="/patients/{{ patient.id }}/">{{ patient.first_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay pacientes próximos<p>
+{% endif %}
